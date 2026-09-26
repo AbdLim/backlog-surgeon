@@ -38,7 +38,7 @@ Build mode: fast
   Learner check: Try the full loop — analyze an idea, copy the result, paste it somewhere to confirm the Markdown is clean. Then click Triage Another and confirm the interface resets correctly.
   Commit: `feat: copy result to clipboard and triage another reset`
 
-- [ ] **3. SEO, README, and Vercel deployment**
+- [x] **3. SEO, README, and Vercel deployment**
   Becomes usable: The app is publicly accessible at a Vercel URL with correct metadata. The repository is demo-ready.
   Why now: The PoC is working — this step makes it accessible for the demo video, judge review, and Devpost submission.
   PRD ref: `prd.md > What We're Building`
