@@ -28,7 +28,7 @@ Build mode: fast
   Learner check: Open http://localhost:3000. Click the "Multi-bank finance app" sample pill, click Analyze Scope, watch the analyzing state cycle, and confirm the structured result appears with Build Now / Build Later / Don't Build columns and correct color accents. Note anything that looks wrong or off before we continue to Slice 2.
   Commit: `feat: end-to-end triage — input, analysis, and results`
 
-- [ ] **2. Copy Result and Triage Another**
+- [x] **2. Copy Result and Triage Another**
   Becomes usable: From the results view, the user can copy the complete diagnosis as Markdown to their clipboard and return to a clean input state.
   Why now: These are the two essential post-result actions that complete the demo story per `prd.md > The Core Journey` step 6. Small, isolated, safe to do after the kernel is confirmed working.
   PRD ref: `prd.md > Structured Results & Copy Action`, `prd.md > Features and Behavior > 4`

@@ -17,7 +17,20 @@ export function ResultsView({ result, originalInput, onReset }: ResultsViewProps
   const handleCopy = async () => {
     try {
       const markdown = formatTriageMarkdown(result, originalInput)
-      await navigator.clipboard.writeText(markdown)
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(markdown)
+      } else {
+        const textarea = document.createElement('textarea')
+        textarea.value = markdown
+        textarea.style.position = 'fixed'
+        textarea.style.left = '-999999px'
+        textarea.style.top = '-999999px'
+        document.body.appendChild(textarea)
+        textarea.focus()
+        textarea.select()
+        document.execCommand('copy')
+        textarea.remove()
+      }
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch (err) {
