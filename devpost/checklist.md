@@ -9,7 +9,7 @@ Build mode: fast
 
 ## Slices
 
-- [ ] **1. End-to-end triage works: paste → analyze → see structured results**
+- [x] **1. End-to-end triage works: paste → analyze → see structured results**
   Becomes usable: A running app where a user pastes a messy product idea, clicks Analyze Scope, waits through the clinical analyzing state, and sees a structured opinionated diagnosis (Build Now / Build Later / Don't Build + diagnostics). The full kernel is proven.
   Why now: The triage engine is the entire product. Verifying the API contract and rendering pipeline on step 1 means every later slice lands on a known-good foundation. Sub-checkpoints (1.1–1.9) keep each risky layer verified before the next depends on it.
   PRD ref: `prd.md > The Core Journey`, `prd.md > Features and Behavior > 1–3`, `prd.md > States and Boundaries`
@@ -50,7 +50,7 @@ Build mode: fast
 
 ## Hands-on Checkpoints
 
-- [ ] Early checkpoint — after Slice 1.9: full core journey on localhost with multi-bank example; learner reports triage quality and visual issues before Slice 2
+- [x] Early checkpoint — after Slice 1.9: full core journey on localhost with multi-bank example; learner reports triage quality and visual issues before Slice 2
 - [ ] Final kick-the-tires exploration and feedback completed — on deployed Vercel URL after Slice 3
 
 ## Final Review
@@ -70,3 +70,5 @@ Reflection: [offered/answered/declined/already covered — personal answer belon
 Activity mode: [live app and editor, explicit static fallback, focused alternative, prior practice, or recap]
 
 ## Revisions
+
+- `refusalReason` added to `TRIAGE_JSON_SCHEMA.required` — OpenAI strict mode requires every property listed in the schema to be in the `required` array; optional fields are not permitted. The field now returns an empty string instead of being absent when context is sufficient. Zod schema and route handler updated accordingly (checkpoint 1.4).
