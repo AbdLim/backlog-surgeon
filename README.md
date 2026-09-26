@@ -85,7 +85,7 @@ This project was built for the **Devpost Learn AI Basics** hackathon using a pla
 
 1. **Clone the repository:**
    ```bash
-   git clone <TODO: YOUR_GITHUB_REPOSITORY_URL>
+   git clone https://github.com/abdlim/backlog-surgeon
    cd backlog-surgeon
    ```
 
